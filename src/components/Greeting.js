@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, {keyframes} from 'styled-components'
 
 export const Greeting = () => {
     return (
@@ -12,6 +12,15 @@ export const Greeting = () => {
     </Container>
     )
 }
+
+const textAnimation = keyframes`
+0% { transform: translateY(-50px); opacity: 0; }
+100% { transform: translateY(0px); opacity: 1;}`
+
+const greetingAnimation = keyframes`
+0% { transform: scale(0); opacity: 0; }
+25% {transform: scale(1.05); opacity: 1; }
+100% { transform: scale(1); opacity: 1;}`
 
 const Container = styled.section`
 display: flex;
@@ -31,6 +40,7 @@ line-height:100px;
 margin-top: 50px;
 margin-bottom: 20px;
 color: rgb(255,245,235);
+animation: ${greetingAnimation} 1s ease-out;
 `
 
 const Subheadline = styled.h2`
@@ -40,6 +50,9 @@ font-weight: 200;
 width: 85%;
 text-align: center;
 color: rgb(255,245,235);
+animation: ${textAnimation} 1s ease-out;
+animation-delay: 0.1s;
+animation-fill-mode: backwards;
 /* line-height:50px; */
 `
 
@@ -49,6 +62,9 @@ font-size: 20px;
 font-weight: 400;
 color: rgb(255,245,235);
 text-align: center;
+animation: ${textAnimation} 1s ease-out;
+animation-delay: 0.2s;
+animation-fill-mode: backwards;
 `
 
 const Regards = styled.p`
@@ -56,4 +72,7 @@ font-family: 'Montserrat', sans-serif;
 font-size: 20px;
 font-weight: 400;
 color: rgb(255,245,235);
+animation: ${textAnimation} 1s ease-out;
+animation-delay: 0.5s;
+animation-fill-mode: backwards;
 `
