@@ -32,8 +32,6 @@ background-color: #F2AAA0;
 `
 
 const Headline = styled.h1`
-/* font-family: 'Lemonada', cursive; */
-/* font-family: 'Montserrat', sans-serif;*/
 font-family: 'Sniglet', cursive;
 font-size: 100px;
 line-height:100px;
@@ -51,9 +49,8 @@ width: 85%;
 text-align: center;
 color: rgb(255,245,235);
 animation: ${textAnimation} 1s ease-out;
-animation-delay: 0.1s;
+animation-delay: 0.5s;
 animation-fill-mode: backwards;
-/* line-height:50px; */
 `
 
 const Paragraph = styled.p`
@@ -63,7 +60,7 @@ font-weight: 400;
 color: rgb(255,245,235);
 text-align: center;
 animation: ${textAnimation} 1s ease-out;
-animation-delay: 0.2s;
+animation-delay: 0.7s;
 animation-fill-mode: backwards;
 `
 
@@ -73,6 +70,6 @@ font-size: 20px;
 font-weight: 400;
 color: rgb(255,245,235);
 animation: ${textAnimation} 1s ease-out;
-animation-delay: 0.5s;
+animation-delay: 0.9s;
 animation-fill-mode: backwards;
 `
